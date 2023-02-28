@@ -19,16 +19,22 @@ namespace MicroServiceTest.Controllers
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> GetProductFromAPIAsync()
+        public async Task<IActionResult> GetProductFromAPI()
         {
             return Ok(await productService.GetAllProductAsync());
         }
 
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> GetGenericProductFromAPIAsync()
+        public async Task<IActionResult> GetGenericProductFromAPI()
         {
             return Ok(await productService.GetGenericProductAsync());
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetUserProductAPI(string jwt)
+        {
+            return Ok(await productService.GetUserProductAsync(jwt));
         }
     }
 }

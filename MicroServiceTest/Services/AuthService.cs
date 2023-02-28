@@ -12,6 +12,7 @@ namespace MicroServiceTest.Services
         public AuthService(IHttpClientFactory httpClientFactory, ILogger<AuthService> logger) 
         {
             httpClient = httpClientFactory.CreateClient();
+            httpClient.BaseAddress = new Uri("http://localhost:81/api/");
             this.logger = logger;
         }
 
@@ -23,7 +24,7 @@ namespace MicroServiceTest.Services
                 Password = loginRequest.Password
             };
 
-            var response = await httpClient.PostAsJsonAsync("http://localhost:81/api/Auth/Login", postBody);
+            var response = await httpClient.PostAsJsonAsync("Auth/Login", postBody);
 
             if (response.IsSuccessStatusCode)
             {

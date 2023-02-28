@@ -2,6 +2,7 @@
 using MicroServiceTest.Models;
 using Newtonsoft.Json;
 using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace MicroServiceTest.Services
 {
@@ -14,11 +15,12 @@ namespace MicroServiceTest.Services
         {
             this.logger = logger;
             httpClient = httpClientFactory.CreateClient();
+            httpClient.BaseAddress = new Uri("http://localhost:81/api/");
         }
 
         public async Task<List<ProductResponse>> GetAllProductAsync()
         {
-            var response = await httpClient.GetAsync("http://localhost:81/api/Product/GetProductForAllUser");
+            var response = await httpClient.GetAsync("Product/GetProductForAllUser");
             var ObjData = new List<ProductResponse>();
 
             if (response.IsSuccessStatusCode)
@@ -34,7 +36,7 @@ namespace MicroServiceTest.Services
 
         public async Task<List<T>> GetGenericProductAsync()
         {
-            var response = await httpClient.GetAsync("http://localhost:81/api/Product/GetProductForAllUser");
+            var response = await httpClient.GetAsync("Product/GetProductForAllUser");
             var ObjData = new List<T>();
 
             if (response.IsSuccessStatusCode)
@@ -46,6 +48,25 @@ namespace MicroServiceTest.Services
 
             logger.LogInformation(ObjData.ToString());
             return ObjData;
+        }
+
+        public async Task<List<UserProductResponse>?> GetUserProductAsync(string jwt)
+        {
+            var objData = new List<UserProductResponse>();
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwt);
+            var response = await httpClient.GetAsync("Product/GetProduct");
+
+            if (response.IsSuccessStatusCode)
+            {
+                objData = await response.Content.ReadFromJsonAsync<List<UserProductResponse>>() ?? new List<UserProductResponse>();
+            }
+            else if ((int)response.StatusCode == 401)
+            {
+                return null;
+            }
+
+            logger.LogInformation(objData.ToString());
+            return objData;
         }
     }
 }

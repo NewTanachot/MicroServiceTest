@@ -9,5 +9,7 @@ namespace MicroServiceTest.Interfaces
         Task<List<ProductResponse>> GetAllProductAsync();
 
         Task<List<T>> GetGenericProductAsync();
+
+        Task<List<UserProductResponse>?> GetUserProductAsync(string jwt);
     }
 }
