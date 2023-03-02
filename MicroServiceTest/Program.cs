@@ -23,7 +23,12 @@ builder.Services.AddSingleton<IAuthService, AuthService>();
 // Use Serilog
 builder.Host.UseSerilog((context, config) =>
 {
-    config.WriteTo.Console();
+    // Config from appsetting
+    config.ReadFrom.Configuration(new ConfigurationBuilder().AddJsonFile("appsettings.json").Build());
+
+    // Dirty config
+    //config.WriteTo.Console();
+    //config.WriteTo.File(builder.Configuration.GetValue<string>("LoggerFilePath") ?? string.Empty);
 });
 
 var app = builder.Build();

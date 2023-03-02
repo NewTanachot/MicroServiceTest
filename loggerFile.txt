@@ -1,0 +1,82 @@
+2023-03-02 13:12:38.151 +07:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-03-02 13:12:38.288 +07:00 [INF] Now listening on: https://localhost:7229
+2023-03-02 13:12:38.317 +07:00 [INF] Now listening on: http://localhost:5087
+2023-03-02 13:12:38.323 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-02 13:12:38.325 +07:00 [INF] Hosting environment: Development
+2023-03-02 13:12:38.327 +07:00 [INF] Content root path: D:\ASP.Net Core\MicroServiceTest\MicroServiceTest
+2023-03-02 13:12:38.941 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7229/swagger - -
+2023-03-02 13:12:39.083 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7229/swagger - - - 301 0 - 146.6937ms
+2023-03-02 13:12:39.093 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7229/swagger/index.html - -
+2023-03-02 13:12:39.275 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7229/swagger/index.html - - - 200 - text/html;charset=utf-8 181.3634ms
+2023-03-02 13:12:39.282 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7229/swagger/swagger-ui.css - -
+2023-03-02 13:12:39.283 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7229/swagger/swagger-ui-bundle.js - -
+2023-03-02 13:12:39.283 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7229/swagger/swagger-ui-standalone-preset.js - -
+2023-03-02 13:12:39.326 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-03-02 13:12:39.326 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-03-02 13:12:39.329 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7229/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 46.0665ms
+2023-03-02 13:12:39.330 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7229/swagger/swagger-ui.css - - - 200 143943 text/css 48.0192ms
+2023-03-02 13:12:39.330 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-03-02 13:12:39.332 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7229/_framework/aspnetcore-browser-refresh.js - -
+2023-03-02 13:12:39.333 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7229/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 50.5357ms
+2023-03-02 13:12:39.338 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7229/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 6.0478ms
+2023-03-02 13:12:39.344 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7229/_vs/browserLink - -
+2023-03-02 13:12:39.385 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7229/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.8260ms
+2023-03-02 13:12:39.562 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7229/swagger/v1/swagger.json - -
+2023-03-02 13:12:39.701 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7229/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.1880ms
+03/02/2023 16:15:37 +07:00 The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+03/02/2023 16:15:47 +07:00 OK
+03/02/2023 16:17:19 +07:00 The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+03/02/2023 16:17:22 +07:00 NotFound
+03/02/2023 16:18:34 +07:00 The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+03/02/2023 16:18:45 +07:00 StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  Transfer-Encoding: chunked
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Date: Thu, 02 Mar 2023 09:18:45 GMT
+  Content-Type: application/json; charset=utf-8
+}
+03/02/2023 16:19:27 +07:00 The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+03/02/2023 16:19:32 +07:00 Now listening on: "https://localhost:7229"
+03/02/2023 16:19:32 +07:00 Now listening on: "http://localhost:5087"
+03/02/2023 16:19:32 +07:00 Application started. Press Ctrl+C to shut down.
+03/02/2023 16:19:32 +07:00 Hosting environment: "Development"
+03/02/2023 16:19:32 +07:00 Content root path: "D:\ASP.Net Core\MicroServiceTest\MicroServiceTest"
+03/02/2023 16:19:32 +07:00 Request starting HTTP/2 GET https://localhost:7229/swagger - -
+03/02/2023 16:19:32 +07:00 Request finished HTTP/2 GET https://localhost:7229/swagger - - - 301 0 - 63.0802ms
+03/02/2023 16:19:32 +07:00 Request starting HTTP/2 GET https://localhost:7229/swagger/index.html - -
+03/02/2023 16:19:32 +07:00 Request finished HTTP/2 GET https://localhost:7229/swagger/index.html - - - 200 - text/html;charset=utf-8 144.9623ms
+03/02/2023 16:19:32 +07:00 Request starting HTTP/2 GET https://localhost:7229/swagger/swagger-ui.css - -
+03/02/2023 16:19:32 +07:00 Request starting HTTP/2 GET https://localhost:7229/swagger/swagger-ui-standalone-preset.js - -
+03/02/2023 16:19:32 +07:00 Request starting HTTP/2 GET https://localhost:7229/swagger/swagger-ui-bundle.js - -
+03/02/2023 16:19:32 +07:00 Request starting HTTP/2 GET https://localhost:7229/_framework/aspnetcore-browser-refresh.js - -
+03/02/2023 16:19:32 +07:00 Request starting HTTP/2 GET https://localhost:7229/_vs/browserLink - -
+03/02/2023 16:19:32 +07:00 Request finished HTTP/2 GET https://localhost:7229/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 23.7411ms
+03/02/2023 16:19:32 +07:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+03/02/2023 16:19:32 +07:00 Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+03/02/2023 16:19:32 +07:00 Request finished HTTP/2 GET https://localhost:7229/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 54.4325ms
+03/02/2023 16:19:32 +07:00 Request finished HTTP/2 GET https://localhost:7229/swagger/swagger-ui.css - - - 200 143943 text/css 57.1240ms
+03/02/2023 16:19:32 +07:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+03/02/2023 16:19:32 +07:00 Request finished HTTP/2 GET https://localhost:7229/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 62.8359ms
+03/02/2023 16:19:32 +07:00 Request finished HTTP/2 GET https://localhost:7229/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 69.6461ms
+03/02/2023 16:19:32 +07:00 Request starting HTTP/2 GET https://localhost:7229/swagger/v1/swagger.json - -
+03/02/2023 16:19:33 +07:00 Request finished HTTP/2 GET https://localhost:7229/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 120.2839ms
+03/02/2023 16:19:40 +07:00 Request starting HTTP/2 POST https://localhost:7229/api/Auth application/json 57
+03/02/2023 16:19:40 +07:00 Executing endpoint '"MicroServiceTest.Controllers.AuthController.LoginAsync (MicroServiceTest)"'
+03/02/2023 16:19:40 +07:00 Route matched with "{action = \"Login\", controller = \"Auth\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(MicroServiceTest.Models.loginRequest)" on controller "MicroServiceTest.Controllers.AuthController" ("MicroServiceTest").
+03/02/2023 16:19:40 +07:00 Start processing HTTP request "POST" "http://localhost:81/api/Auth/Login"
+03/02/2023 16:19:40 +07:00 Sending HTTP request "POST" "http://localhost:81/api/Auth/Login"
+03/02/2023 16:19:40 +07:00 Received HTTP response headers after 170.195ms - 200
+03/02/2023 16:19:40 +07:00 End processing HTTP request after 182.8696ms - 200
+03/02/2023 16:19:40 +07:00 StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  Transfer-Encoding: chunked
+  Server: Microsoft-IIS/10.0
+  X-Powered-By: ASP.NET
+  Date: Thu, 02 Mar 2023 09:19:40 GMT
+  Content-Type: application/json; charset=utf-8
+}
+03/02/2023 16:19:40 +07:00 Executing "OkObjectResult", writing value of type '"MicroServiceTest.Models.LoginResponse"'.
+03/02/2023 16:19:40 +07:00 Executed action "MicroServiceTest.Controllers.AuthController.LoginAsync (MicroServiceTest)" in 264.9538ms
+03/02/2023 16:19:40 +07:00 Executed endpoint '"MicroServiceTest.Controllers.AuthController.LoginAsync (MicroServiceTest)"'
+03/02/2023 16:19:40 +07:00 Request finished HTTP/2 POST https://localhost:7229/api/Auth application/json 57 - 200 - application/json;+charset=utf-8 306.7898ms

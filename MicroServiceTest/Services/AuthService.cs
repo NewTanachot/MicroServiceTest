@@ -28,11 +28,11 @@ namespace MicroServiceTest.Services
 
             if (response.IsSuccessStatusCode)
             {
-                logger.LogInformation(response.StatusCode.ToString());
+                logger.LogInformation(response.ToString());
                 return await response.Content.ReadFromJsonAsync<LoginResponse>();    
             }
             
-            logger.LogError(response.StatusCode.ToString());
+            logger.LogError(response.ToString());
             return null;
         }
     }
