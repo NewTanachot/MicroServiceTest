@@ -3,6 +3,7 @@ using MicroServiceTest.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace MicroServiceTest.Controllers
 {
@@ -32,6 +33,16 @@ namespace MicroServiceTest.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet("[action]")]
+        public IActionResult TestModelAPI()
+        {
+            var model = new TestModel();
+            model.CreditCard = "1234-4567-7890";
+
+            _logger.LogWarning(model.CreditCard);
+            return Ok(model.CreditCard);
         }
     }
 }
