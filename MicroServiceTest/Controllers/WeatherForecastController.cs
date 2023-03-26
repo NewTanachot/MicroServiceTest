@@ -36,6 +36,14 @@ namespace MicroServiceTest.Controllers
         }
 
         [HttpGet("[action]")]
+        public async Task<IActionResult> TestJsonPlaceholder()
+        {
+            var http = new HttpClient();
+            var result = await http.GetFromJsonAsync<JsonPlaceholderModel>("https://jsonplaceholder.typicode.com/todos/1");
+            return Ok(result);
+        }
+
+        [HttpGet("[action]")]
         public IActionResult TestModelAPI()
         {
             var model = new TestModel();

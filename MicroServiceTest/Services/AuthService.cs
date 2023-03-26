@@ -12,7 +12,8 @@ namespace MicroServiceTest.Services
         public AuthService(IHttpClientFactory httpClientFactory, ILogger<AuthService> logger) 
         {
             httpClient = httpClientFactory.CreateClient();
-            httpClient.BaseAddress = new Uri("http://localhost:81/api/");
+            //httpClient.BaseAddress = new Uri("http://localhost:81/api/");
+            httpClient.BaseAddress = new Uri("http://192.168.1.44/api/");
             this.logger = logger;
         }
 

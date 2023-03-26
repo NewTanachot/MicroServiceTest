@@ -18,8 +18,8 @@ namespace MicroServiceTest.Controllers
             this.authService = authService;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> LoginAsync([FromBody] loginRequest loginRequest)
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Login([FromBody] loginRequest loginRequest)
         {
             var result = await authService.LoginAsync(loginRequest);
             if (result is null) 
