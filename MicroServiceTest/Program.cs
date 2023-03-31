@@ -1,10 +1,18 @@
+using MicroServiceTest.Data;
 using MicroServiceTest.Interfaces;
 using MicroServiceTest.Services;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+// Db Service in DI
+builder.Services.AddDbContext<DatabaseContext>(option =>
+{
+    option.UseSqlite(builder.Configuration.GetConnectionString("default"));
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -13,7 +21,7 @@ builder.Services.AddSwaggerGen();
 
 // Add Essential Dependency Injection
 
-// Controller is automaticly add HttpClient already but ni Service is not. You need to add again
+// Controller is automaticly add HttpClient already but in Service is not. You need to add again
 builder.Services.AddHttpClient();
 // Add ProductService in DI
 builder.Services.AddSingleton(typeof(IProductService<>), typeof(ProductService<>));
