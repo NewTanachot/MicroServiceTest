@@ -3,6 +3,7 @@ using MicroServiceTest.Interfaces;
 using MicroServiceTest.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,13 @@ builder.Services.AddDbContext<DatabaseContext>(option =>
     option.UseSqlite(builder.Configuration.GetConnectionString("default"));
 });
 
-builder.Services.AddControllers();
+//builder.Services.AddControllers();
+
+// Add IgnoreCycles in JsonOption for Fix recursion of data access process (EF Core model)
+builder.Services.AddControllers()
+    .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
