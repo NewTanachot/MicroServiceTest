@@ -40,6 +40,7 @@ namespace MicroServiceTest.Controllers
 
             if (classroomInclude)
             {
+                queryData = queryData
                     .Include(x => x.ClassRoom)
                     .AsNoTracking();
             }
