@@ -26,17 +26,22 @@ namespace MicroServiceTest.Controllers
 
             if (profileInclude)
             {
-                queryData = queryData.Include(x => x.StudentProfile);
+                queryData = queryData
+                    .Include(x => x.StudentProfile)
+                    .AsNoTracking();
             }
 
             if (subjectInclude)
             {
-                queryData = queryData.Include(x => x.Subjects);
+                queryData = queryData
+                    .Include(x => x.Subjects)
+                    .AsNoTracking();
             }
 
             if (classroomInclude)
             {
-                queryData = queryData.Include(x => x.ClassRoom);
+                    .Include(x => x.ClassRoom)
+                    .AsNoTracking();
             }
 
             return Ok(await queryData.ToListAsync());
@@ -74,15 +79,15 @@ namespace MicroServiceTest.Controllers
         {
             if (isInclude)
             {
-                return Ok(await context.StudentProfile.Include(x => x.Student).ToListAsync());
+                return Ok(await context.StudentProfile.Include(x => x.Student)
+                    .AsNoTracking()
+                    .ToListAsync());
             }
             else
             {
                 return Ok(await context.StudentProfile.ToListAsync());
             }
         }
-
-        [HttpPost("[action]")]
 
         // ==== Subject ====
 
@@ -91,7 +96,9 @@ namespace MicroServiceTest.Controllers
         {
             if (isInclude)
             {
-                return Ok(await context.Subject.Include(x => x.Students).ToListAsync());
+                return Ok(await context.Subject.Include(x => x.Students)
+                    .AsNoTracking()
+                    .ToListAsync());
             }
             else
             {
@@ -122,6 +129,7 @@ namespace MicroServiceTest.Controllers
             {
                 return Ok(await context.ClassRoom
                     .Include(x => x.Students)
+                    .AsNoTracking()
                     .ToListAsync());
             }
             else
